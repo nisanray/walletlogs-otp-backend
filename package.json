@@ -1,20 +1,39 @@
 {
   "name": "walletlogs-otp-backend",
   "version": "1.0.0",
-  "description": "OTP email backend for WalletLogs 2FA authentication",
+  "description": "Production-ready OTP email backend for WalletLogs 2FA authentication with enhanced security and monitoring",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "prod": "NODE_ENV=production node index.js",
+    "logs": "tail -f logs/combined.log",
+    "logs:error": "tail -f logs/error.log"
   },
-  "keywords": ["otp", "email", "2fa", "authentication", "nodejs", "express"],
+  "keywords": [
+    "otp",
+    "email",
+    "2fa",
+    "authentication",
+    "nodejs",
+    "express",
+    "security",
+    "production"
+  ],
   "author": "WalletLogs Team",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemailer": "^6.9.7",
+    "compression": "^1.8.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.7",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
