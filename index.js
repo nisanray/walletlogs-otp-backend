@@ -199,5 +199,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 OTP Email Backend running on port ${PORT}`);
   console.log(`📧 SMTP configured for: ${process.env.SMTP_USER}`);
-  console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+  console.log(`🔗 Health check: https://walletlogs-otp-backend.onrender.com:${PORT}/health`);
 });
